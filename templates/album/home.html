@@ -1,0 +1,11 @@
+<h1>My Albums</h1>
+
+{% for album in albums %}
+
+<h2>Album Name: {{ album.title }}</h2>
+<h2>Date Added To Collection :{{ album.date }}</h2>
+<h2>Album Artist: {{ album.artistname}}</h2>
+
+<img src="{{ album.albumcover.url }}" height="250" width="250">
+
+{% endfor %}
