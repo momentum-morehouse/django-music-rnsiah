@@ -1,0 +1,17 @@
+<h2>Are you sure you want to delete this album</h2>
+
+{% block content %}
+
+<h1>Delete This Album</h1>
+
+<form action={% url "delete_album" pk=album.pk %} method="POST">
+  {% csrf_token %}
+  <p> Are you sure you want to delete "{{ album.title }}"
+    <br>
+   <button type='submit'>Delete Album Now</button>
+   <button><a class='add' href="{% url 'home' %}"> Return to My Albums</a></button>
+
+  
+
+
+{% endblock %}

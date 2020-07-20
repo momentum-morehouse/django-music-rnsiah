@@ -1,0 +1,17 @@
+{% extends 'album/base.html' %}
+
+{% block content %}
+
+<h1> Edit Album</h1>
+<form action='{% url 'edit_album' pk=album.pk %}' method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit"> Update Album</button>
+  <br>
+  <br>
+  <button><a class='add' href="{% url "home" % }"> Go Back Home</a></button>
+
+
+
+
+{% endblock %}
